@@ -966,7 +966,7 @@ static int brcm_pcie_setup(struct brcm_pcie *pcie)
 		msleep(5);
 
 	if (!brcm_pcie_link_up(pcie)) {
-		dev_err(dev, "link down\n");
+		dev_err(dev, "r-link down\n");---------------------------------------------------Added the R so that I know its a other code
 		return -ENODEV;
 	}
 
