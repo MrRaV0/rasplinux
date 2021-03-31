@@ -896,7 +896,7 @@ static int brcm_pcie_setup(struct brcm_pcie *pcie)
 		burst = 0x3; /* 512 bytes */
 	else
 		burst = 0x2; /* 512 bytes */
-	printk("MANUAL PRINT: burst = %d\n",burst)//---------------------------------------------------added
+	printk("MANUAL PRINT: burst = %d\n",burst);//---------------------------------------------------added
 
 	/* Set SCB_MAX_BURST_SIZE, CFG_READ_UR_MODE, SCB_ACCESS_EN */
 	tmp = readl(base + PCIE_MISC_MISC_CTRL);
@@ -956,7 +956,7 @@ static int brcm_pcie_setup(struct brcm_pcie *pcie)
 
 	/* Unassert the fundamental reset */
 	pcie->perst_set(pcie, 0);
-	printk("MANUAL PRINT: PCIe RESET ASSERTED\n")//---------------------------------------------------added
+	printk("MANUAL PRINT: PCIe RESET ASSERTED\n");//---------------------------------------------------added
 	
 	/*
 	 * Give the RC/EP time to wake up, before trying to configure RC.
