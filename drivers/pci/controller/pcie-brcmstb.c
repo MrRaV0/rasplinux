@@ -962,6 +962,7 @@ static int brcm_pcie_setup(struct brcm_pcie *pcie)
 	 * Give the RC/EP time to wake up, before trying to configure RC.
 	 * Intermittently check status for link-up, up to a total of 100ms.
 	 */
+	dev_err(dev, "custon error to proof that this has loaded\n");
 	for (i = 0; i < 10000 && !brcm_pcie_link_up(pcie); i += 5)//---------------------------------------------------increased linkup time from 100ms to 10s
 		msleep(5);
 
